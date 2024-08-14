@@ -19,7 +19,10 @@ export default async function Home() {
       <div className="flex flex-col gap-2">
         {data.allData.map(
           (d: { topic: string; description: string }, i: number) => (
-            <div className="flex justify-between gap-1 bg-gray-50 shadow text-black rounded-md px-4 py-2">
+            <div
+              key={i}
+              className="flex justify-between gap-1 bg-gray-50 shadow text-black rounded-md px-4 py-2"
+            >
               <div className="flex flex-col gap-1">
                 <p>Topic: {d.topic}</p>
                 <p>Description: {d.description}</p>
