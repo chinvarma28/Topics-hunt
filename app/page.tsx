@@ -5,7 +5,9 @@ import { Trash2 } from "lucide-react";
 import DeleteBtn from "./components/delete-btn";
 
 export default async function Home() {
-  const response = await fetch("http://localhost:3000/api/topic");
+  const response = await fetch("http://localhost:3000/api/topic", {
+    headers: headers(),
+  });
   const data = await response.json();
   console.log(data);
 
