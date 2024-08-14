@@ -7,10 +7,8 @@ export async function GET() {
   try {
     await client.connect();
 
-    // Choose a name for your database
     const database = client.db("topics-db");
 
-    // Choose a name for your collection
     const allDataCursor = database.collection("topics").find();
     const allData = await allDataCursor.toArray();
 
